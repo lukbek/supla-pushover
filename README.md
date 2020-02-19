@@ -105,5 +105,5 @@ Humidity and temperature sensors has two values (temp and humidity). In order to
 
 # Support
 
-Feel free to ask on forum.supla.org for this software and report issues on github.
+Feel free to ask on [`SUPLA's forum`](https://forum.supla.org) for this software and report issues on github.
 

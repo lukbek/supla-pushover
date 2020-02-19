@@ -93,7 +93,7 @@ Examples:
 * `time='* * * * * *'` will trigger every second
 * `time='*/5 * * * * *'` will trigger on every 5 second
 * `time='0 5 * * * *'` will trigger on every file minute of every hour
-* `time='* * 22 * * *'` will trigger every day at 22:00 hour
+* `time='0 0 22 * * *'` will trigger every day at 22:00 hour
 
 You can test your value on [`crontab-generator`](https://crontab.guru/#*_*_*_*_*) website but remeber that default cron format does not support seconds. Minimum cron value is minute so you need to know that if you set in `crontab-generator` a value `* * * * *` you should add an aditional seconds mark in front of it before using it in supla-pushover expression. You can assign seconds mark just like a minute mark. 
 

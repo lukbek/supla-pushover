@@ -63,6 +63,7 @@ First occurs when one of the conditionized channel change, second triggers when 
 
 In `condition` property you set an condition that must be set to trigger notification.
 When you use %channel_N% (N is an channel id viewable in SUPLA cloud), parser will replace it with current channel value.
+It'is using [`bc tool`](https://pl.wikipedia.org/wiki/Bc_(Unix)) for parsing expressions.
 
 Example: 
 
@@ -78,7 +79,7 @@ if you write `echo "(1 == 1 || 0 == 1) && 1 == 0" | bc` (channel values are exam
 
 # Time condition format 
 
-If you want use `ontime` trigger type you need to set `time` property. It is in [`cron`](https://en.wikipedia.org/wiki/Cron) format but with seconds support. Seconds are in first position of six character.
+If you want use `ontime` trigger type you need to set `time` property. It is in [`cron`](https://en.wikipedia.org/wiki/Cron) format but with seconds support. Seconds are in first position of six character set.
 
 Examples:
 

@@ -1,0 +1,23 @@
+supla:
+  port: 2016
+  host: 'srvX.supla.org'
+  email: 'email@supla.org'
+  protocol_version: 10
+
+pushover:
+  user: 'XXXXXXXX'
+  token: 'XXXXXXX'
+
+notifications:
+  - trigger: 'onchange'
+    condition: '%channel_1% == 1'
+    message: 'kitchen lamp is on!'
+
+  - trigger: 'ontime'
+    time: '* * 22 * * *'
+    condition: '%channel_2% == 1 || %channel_3% == 1'
+    message: 'porch lights are on!'
+  
+  - trigger: 'onchange'
+    condition: '%channel_12% > 23.4'
+    message: 'it's hot!'

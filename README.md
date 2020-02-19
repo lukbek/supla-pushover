@@ -6,6 +6,11 @@ In order to use this software you need to have Pushover account, SUPLA account a
 
 The possibilities of this solution are described below. 
 
+<p align="center"> 
+<img src="kitchen.png">
+</p>
+
+
 # Installation
 ```
 sudo apt-get update

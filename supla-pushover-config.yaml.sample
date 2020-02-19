@@ -20,4 +20,4 @@ notifications:
   
   - trigger: 'onchange'
     condition: '%channel_12% > 23.4'
-    message: 'it's hot!'
+    message: 'it is hot!'

@@ -91,7 +91,7 @@ If you want use `ontime` trigger type you need to set `time` property. It is in 
 Examples:
 
 * `time='* * * * * *'` will trigger every second
-* `time='\5 * * * * *'` will trigger on every 5 second
+* `time='/5 * * * * *'` will trigger on every 5 second
 * `time='0 5 * * * *'` will trigger on every file minute of every hour
 * `time='* * 22 * * *'` will trigger every day at 22:00 hour
 

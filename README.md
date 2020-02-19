@@ -4,6 +4,8 @@ This software is a fork from [`supla-core`](https://github.com/SUPLA/supla-core)
 
 In order to use this software you need to have Pushover account, SUPLA account and a device like Raspberry Pi (3,4,Zero) or computer with linux installed (like Ubuntu). You need to install a Pushover mobile app on your device too.
 
+Your are using this software for your own risk. Please don't rely on it if it comes to a life danger situation.
+
 The possibilities of this solution are described below. 
 
 <p align="center"> 

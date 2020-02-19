@@ -90,6 +90,12 @@ Examples:
 
 You can test your value on [`crontab-generator`](https://crontab.guru/#*_*_*_*_*) website but remeber that default cron format does not support seconds. Minimum cron value is minute so you need to know that if you set in `crontab-generator` a value `* * * * *` you should add an aditional seconds mark in front of it before using it in supla-pushover expression. You can assign seconds mark just like a minute mark. 
 
+# SUPLA channel support
+
+This software for one supports only all kind of sensors and relays. It is not supporting electricity meters for now. But I will add them in near future.
+
+Humidity and temperature sensors has two values (temp and humidity). In order to use them you need use `field index` in `%channel_I_N%` template. Temperature value is on 0 index, humidity is 1 so if you want to use humidity condition you need to define like `%channel_1_12` where `12` is an channel id and `1` is an humidity value field index (0 - temp, 1 - humidity).
+
 # Support
 
 Feel free to ask on forum.supla.org for this software and report issues on github.

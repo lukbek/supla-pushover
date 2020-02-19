@@ -2,7 +2,7 @@
 
 This software is a fork from [`supla-core`](https://github.com/SUPLA/supla-core) used to send notifications from SUPLA to your android or ios device via [`Pushover`](https://pushover.net/) service. This is not official SUPLA software. There are plans to have native notification support in SUPLA in near future. 
 
-In order to use this software you need to have Pushover account, SUPLA account and a device like Raspberry Pi (3,4,Zero) or computer with linux installed (like Ubuntu).
+In order to use this software you need to have Pushover account, SUPLA account and a device like Raspberry Pi (3,4,Zero) or computer with linux installed (like Ubuntu). You need to install a Pushover mobile app on your device too.
 
 The possibilities of this solution are described below. 
 

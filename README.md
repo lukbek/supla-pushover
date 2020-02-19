@@ -1,6 +1,6 @@
 # SUPLA-PUSHOVER
 
-This software is a fork from [`supla-core`](https://github.com/SUPLA/supla-core') used to send notifications from SUPLA to your phone via [`Pushover`](https://pushover.net/) service.
+This software is a fork from [`supla-core`](https://github.com/SUPLA/supla-core) used to send notifications from SUPLA to your phone via [`Pushover`](https://pushover.net/) service.
 You can define the conditions under which the notification will be sent and its content. The possibilities of this solution are described below.
 
 # Installation

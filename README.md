@@ -32,7 +32,7 @@ cd supla-pushover
 ### Configuration
 
 After installing there should be a supla-pushover-config.yaml file generated for you. You need to adjust your SUPLA account data, Pushover account data and configure conditions for notifications. 
-Remeber that you need to enable SUPLA client device registration (smartphone) before starting this software and after starting it you need to assign an access id to the 'Supla pushover' client device witch appeared in SUPLA cloud.
+Remember that you need to enable SUPLA client device registration (smartphone) before starting this software and after starting it you need to assign an access id to the 'Supla pushover' client device witch appeared in SUPLA cloud.
 The Pushover user key (not e-mail address) of your user (or you), viewable when logged into Pushover dashboard, token is your application's API token viewable when clicked on your Pushover application.
 
 ```

@@ -26,7 +26,7 @@ fi
 echo -e "${GREEN}OK!${NC}"
 ./supla-pushover -v
 
-if [ ! -f supla-pushover.yaml ]; then
+if [ ! -f supla-pushover-config.yaml ]; then
   cp supla-pushover-config.yaml.sample supla-pushover-config.yaml
   echo -e "${YELLOW}Sample configuration has been created for you (${NC}supla-pushover-config.yaml${YELLOW})${NC}"
   echo -e "${YELLOW}Adjust it to your needs before launching.${NC}"

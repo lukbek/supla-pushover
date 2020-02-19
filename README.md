@@ -57,7 +57,7 @@ notifications:
 ```
 
 Let's concentrate on notification conditions. There are two trigger types `onchange` and `ontime`.
-First occurs when one of the conditionized channel change, second triggers when time condition is set.
+First occurs when one of the conditionized channel change, second triggers when time condition is set. In `ontime` trigger both time expression and condition must be true to trigger notification.
 
 # Condition language
 

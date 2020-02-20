@@ -73,9 +73,6 @@ You can specify the device to send notifications to. If you specify it in the Pu
 
 Let's focus on the terms of notifications. There are two types of triggers per change and on time. The first occurs when one of the conditioned channels changes, the second triggers when the time condition is set. For a time trigger, both the time expression and the condition must be true to trigger the notification.
 
-You can specify the title at the forwarding level or at the notification level. If you do this, a notification will be sent with this title. The default value is "SUPLA" if it is not provided.
-
-
 You can specify `title` on `pushover` level or on `notification` level. If you do so, the notification will be send with that title.
 The default is 'SUPLA' when not provided.
 

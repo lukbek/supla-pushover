@@ -64,16 +64,18 @@ notifications:
     condition: '%channel_12% > 23.4'
     message: 'it is hot!'
     reset: 'none'
+
 ```
-
-Let's concentrate on notification conditions. There are two trigger types `onchange` and `ontime`.
-First occurs when one of the conditionized channel change, second triggers when time condition is set. In `ontime` trigger both time expression and condition must be true to trigger notification.
-
 By default if condition is set it resets only when change in condition occurs. For example for temerature condition `%channel_12% < 15`
 the condition is true if temperature value of channel 12 will drop below 15 and then notification will be sent. Notification will not be sent again until temperature raise over 15 and drop below 15 again.
 If you specify `reset` mode parameter to `none` notifications will be sent on every trigger check if the temperature is still below 15.
 
-You can specify device to witch send an notification. If You write `device` in `pushover` section, all notoification will be send to that device, you can ovveride it in notification section. When `device` is not specified notifictaion is sended to all registered devices. Device registration is in Pushover dasboard.
+You can specify device to witch send an notification. If You write `device` in `pushover` section, all notofications will be send to that device, you can override it in particular notification section. When `device` is not specified notifictaion is sended to all registered devices. Device registration is in Pushover dasboard.
+
+Let's concentrate on notification conditions. There are two trigger types `onchange` and `ontime`.
+First occurs when one of the conditionized channel change, second triggers when time condition is set. In `ontime` trigger both time expression and condition must be true to trigger notification.
+
+
 
 You can specify `title` on `pushover` level or on `notification` level. If you do so, the notification will be send with that title.
 The default is 'SUPLA' when not provided.

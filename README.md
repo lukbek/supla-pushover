@@ -75,6 +75,8 @@ If you specify `reset` mode parameter to `none` notifications will be sent on ev
 
 You can specify device to witch send an notification. If You write `device` in `pushover` section, all notoification will be send to that device, you can ovveride it in notification section. When `device` is not specified notifictaion is sended to all registered devices. Device registration is in Pushover dasboard.
 
+You can specify `title` on `pushover` level or on `notification` level. If you do so, the notification will be send with that title.
+The default is 'SUPLA' when not provided.
 
 # Condition language
 

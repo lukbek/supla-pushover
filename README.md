@@ -47,6 +47,7 @@ supla:
 pushover:
   user: 'XXXXXXXX'
   token: 'XXXXXXX'
+  device: 'my_device'
 
 notifications:
   - trigger: 'onchange'
@@ -57,6 +58,7 @@ notifications:
     time: '0 0 22 * * *'
     condition: '%channel_2% == 1 || %channel_3% == 1'
     message: 'porch lights are on!'
+    device: 'my_device_1'
   
   - trigger: 'onchange'
     condition: '%channel_12% > 23.4'
@@ -70,6 +72,9 @@ First occurs when one of the conditionized channel change, second triggers when 
 By default if condition is set it resets only when change in condition occurs. For example for temerature condition `%channel_12% < 15`
 the condition is true if temperature value of channel 12 will drop below 15 and then notification will be sent. Notification will not be sent again until temperature raise over 15 and drop below 15 again.
 If you specify `reset` mode parameter to `none` notifications will be sent on every trigger check if the temperature is still below 15.
+
+You can specify device to witch send an notification. If You write `device` in `pushover` section, all notoification will be send to that device, you can ovveride it in notification section. When `device` is not specified notifictaion is sended to all registered devices. Device registration is in Pushover dasboard.
+
 
 # Condition language
 

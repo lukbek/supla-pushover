@@ -66,15 +66,14 @@ notifications:
     reset: 'none'
 
 ```
-By default if condition is set it resets only when change in condition occurs. For example for temerature condition `%channel_12% < 15`
-the condition is true if temperature value of channel 12 will drop below 15 and then notification will be sent. Notification will not be sent again until temperature raise over 15 and drop below 15 again.
-If you specify `reset` mode parameter to `none` notifications will be sent on every trigger check if the temperature is still below 15.
 
-You can specify device to witch send an notification. If You write `device` in `pushover` section, all notofications will be send to that device, you can override it in particular notification section. When `device` is not specified notifictaion is sended to all registered devices. Device registration is in Pushover dasboard.
+By default, the notification will only be sent the first time the condition is checked (if it is met). For example, for the temperature condition% channel_12% <15, it is met if the temperature value of channel 12 falls below 15 degrees - a notification will be sent. However, it will not be sent again until the temperature rises above 15 degrees and falls below it again. If you set the reset mode parameter to none, notifications will be sent each time the condition is checked, if the temperature is still below 15 degrees.
 
-Let's concentrate on notification conditions. There are two trigger types `onchange` and `ontime`.
-First occurs when one of the conditionized channel change, second triggers when time condition is set. In `ontime` trigger both time expression and condition must be true to trigger notification.
+You can specify the device to send notifications to. If you specify it in the Pushover settings section, all notifications will be sent to this device, but you can specify this setting for a specific notification. If a device is not specified, a notification is sent to all registered devices. The device is registered in the Pushover dashboard.
 
+Let's focus on the terms of notifications. There are two types of triggers per change and on time. The first occurs when one of the conditioned channels changes, the second triggers when the time condition is set. For a time trigger, both the time expression and the condition must be true to trigger the notification.
+
+You can specify the title at the forwarding level or at the notification level. If you do this, a notification will be sent with this title. The default value is "SUPLA" if it is not provided.
 
 
 You can specify `title` on `pushover` level or on `notification` level. If you do so, the notification will be send with that title.

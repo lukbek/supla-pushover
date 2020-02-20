@@ -54,17 +54,22 @@ notifications:
     message: 'kitchen lamp is on!'
 
   - trigger: 'ontime'
-    time: '* * 22 * * *'
+    time: '0 0 22 * * *'
     condition: '%channel_2% == 1 || %channel_3% == 1'
     message: 'porch lights are on!'
   
   - trigger: 'onchange'
     condition: '%channel_12% > 23.4'
     message: 'it is hot!'
+    reset: 'none'
 ```
 
 Let's concentrate on notification conditions. There are two trigger types `onchange` and `ontime`.
 First occurs when one of the conditionized channel change, second triggers when time condition is set. In `ontime` trigger both time expression and condition must be true to trigger notification.
+
+By default if condition is set it resets only when change in condition occurs. For example for temerature condition `%channel_12% < 15`
+the condition is true if temperature value of channel 12 will drop below 15 and then notification will be sent. Notification will not be sent again until temperature raise over 15 and drop below 15 again.
+If you specify `reset` mode parameter to `none` notifications will be sent on every trigger check if the temperature is still below 15.
 
 # Condition language
 
@@ -101,7 +106,22 @@ You can test your value on [`crontab-generator`](https://crontab.guru/#*_*_*_*_*
 
 This software for one supports only all kind of sensors and relays. It is not supporting electricity meters for now. But I will add them in near future.
 
-Humidity and temperature sensors has two values (temp and humidity). In order to use them you need use `field index` in `%channel_I_N%` template. Temperature value is on 0 index, humidity is 1 so if you want to use humidity condition you need to define like `%channel_1_12` where `12` is an channel id and `1` is an humidity value field index (0 - temp, 1 - humidity).
+Some sensors are connected to the other device or having more than one value in. In order to use them you need use `field index` in `%channel_I_N%` template.
+
+Sensors witch are connected to the device (for example gate_sensor is connected to gate device) are sending their values with main device so you can get the value by index. 
+
+Suppose you have gate device with id 32 and connected to it opening_sensor 33 and opening_sensor 34 (as full part open sensor)
+
+If you want get sensor values you can write condition like:
+* `%channel_0_32%` or `%channel_32%` gets relay value of gate device
+* `%channel_1_32%` gets value of first connected sensor 
+* `%channel_2_32%` gets value of second connected sensor 
+
+Humidity and temperature sensors has two values (temp and humidity). 
+Temperature value is on 0 index, humidity is 1 so if you want to use humidity condition you need to define like `%channel_1_12` where `12` is an channel id and `1` is an humidity value field index (0 - temp, 1 - humidity).
+
+* `%channel_12%` or `%channel_0_12%` gets temp value
+* `%channel_1_12` gets humidity value
 
 # Support
 

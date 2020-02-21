@@ -1,5 +1,7 @@
 # SUPLA-PUSHOVER
 
+![supla-pushover](https://github.com/lukbek/supla-core/workflows/supla-pushover/badge.svg?branch=supla-pushover)
+
 This software is a fork from [`supla-core`](https://github.com/SUPLA/supla-core) used to send notifications from SUPLA to your android or ios device via [`Pushover`](https://pushover.net/) service. This is not official SUPLA software. There are plans to have native notification support in SUPLA in near future. 
 
 <b>Your are using this software for your own risk. Please don't rely on it if it comes to a life danger situation.</b>

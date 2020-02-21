@@ -66,6 +66,18 @@ notifications:
     condition: '%channel_12% > 23.4'
     message: 'it is hot!'
     reset: 'none'
+    
+  - trigger: 'onconnection'
+    condition: '%channel_12% == 0'
+    message: 'Outside thermometr went offline!'
+
+  - trigger: 'onconnection'
+    condition: '%channel_12% == 1'
+    message: 'Outside thermometr is online!'
+    
+  - trigger: 'onconnection'
+    condtition: '%channel_12% == 1 || %channel_12% == 0'
+    message: 'Outside thermometr changed its connection state'
 
 ```
 
@@ -73,7 +85,8 @@ By default, the notification will only be sent the first time the condition is c
 
 You can specify the device to send notifications to. If you specify it in the Pushover settings section, all notifications will be sent to this device, but you can specify this setting for a specific notification. If a device is not specified, a notification is sent to all registered devices. The device is registered in the Pushover dashboard.
 
-Let's focus on the terms of notifications. There are two types of triggers per change and on time. The first occurs when one of the conditioned channels changes, the second triggers when the time condition is set. For a time trigger, both the time expression and the condition must be true to trigger the notification.
+Let's focus on the terms of notifications. There are three types of triggers `onchange`, `ontime` and `onconnection`. The first occurs when one of the conditioned channels changes, the second triggers when the time condition is set. Third is firing when connection state of channel has changed, you can get notification both on go offline/online state.
+For a time trigger, both the time expression and the condition must be true to trigger the notification.
 
 You can specify `title` on `pushover` level or on `notification` level. If you do so, the notification will be send with that title.
 The default is 'SUPLA' when not provided.

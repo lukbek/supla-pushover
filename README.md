@@ -121,7 +121,7 @@ Examples:
 * `time='0 0 22 * * *'` will trigger every day at 22:00 hour
 
 You can test your value executing `supla-pushover` with `-ct` parameter. 
-`./supla-pushover -ct "0 0 22 * * * ` will print on screen next 20 executions of provided expression.
+`./supla-pushover -ct "0 0 22 * * *"` will print on screen next 20 executions of provided expression.
 
 # SUPLA channel support
 

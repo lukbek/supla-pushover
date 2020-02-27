@@ -53,12 +53,12 @@ pushover:
 
 notifications:
   - trigger: 'onchange'
-    condition: '%channel_1% == 1'
+    condition: '%channel_1% == 1 || %channel_4% == 1'
     message: 'kitchen lamp is on!'
 
   - trigger: 'ontime'
     time: '0 0 22 * * *'
-    condition: '%channel_2% == 1 || %channel_3% == 1'
+    condition: '%channel_2% == 1 && %channel_3% == 1'
     message: 'porch lights are on!'
     device: 'my_device_1'
   
@@ -70,6 +70,9 @@ notifications:
   - trigger: 'onconnection'
     condition: '%channel_12% == 0'
     message: 'Outside thermometr went offline!'
+    priority: 2
+    priority_expire: 300
+    priority_retry: 30
 
   - trigger: 'onconnection'
     condition: '%channel_12% == 1'
@@ -90,6 +93,9 @@ For a time trigger, both the time expression and the condition must be true to t
 
 You can specify `title` on `pushover` level or on `notification` level. If you do so, the notification will be send with that title.
 The default is 'SUPLA' when not provided.
+
+Now You can set the priority of notification using `priority`, `priority_expire`, `priority_retry` parameters. Read more at [`Pushover Priority`](https://pushover.net/api#priority)
+
 
 # Condition language
 

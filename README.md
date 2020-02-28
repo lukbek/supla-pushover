@@ -67,6 +67,11 @@ notifications:
     message: 'it is hot!'
     reset: 'none'
     
+  - trigger: 'onchange'
+    condition: '%channel_543% > 24.0'
+    message: 'it is really hot'
+    debounce: 3000
+    
   - trigger: 'onconnection'
     condition: '%channel_12% == 0'
     message: 'Outside thermometr went offline!'
@@ -94,7 +99,9 @@ For a time trigger, both the time expression and the condition must be true to t
 You can specify `title` on `pushover` level or on `notification` level. If you do so, the notification will be send with that title.
 The default is 'SUPLA' when not provided.
 
-Now You can set the priority of notification using `priority`, `priority_expire`, `priority_retry` parameters. Read more at [`Pushover Priority`](https://pushover.net/api#priority)
+Now you can set the priority of notification using `priority`, `priority_expire`, `priority_retry` parameters. Read more at [`Pushover Priority`](https://pushover.net/api#priority)
+
+Now you can set `debouce` parameter in milliseconds. Debounce parameter means that condition will be true if changes between previous notification and current notification are longer than that parameter.
 
 
 # Condition language

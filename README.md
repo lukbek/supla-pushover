@@ -104,7 +104,7 @@ Now you can set the priority of notification using `priority`, `priority_expire`
 
 Now you can set `debouce` parameter in milliseconds. Debounce parameter means that condition will be true if changes between previous notification and current notification are longer than this parameter.
 
-You can specify `sound` of notification (only Android).
+You can specify `sound` of notification works with priority equal 1.
 
 
 

@@ -69,7 +69,7 @@ notifications:
     
   - trigger: 'onchange'
     condition: '%channel_543% > 24.0'
-    message: 'it is really hot'
+    message: 'it is really hot (%channel_543% Celcius degrees)'
     debounce: 3000
     
   - trigger: 'onconnection'
@@ -86,6 +86,7 @@ notifications:
   - trigger: 'onconnection'
     condtition: '%channel_12% == 1 || %channel_12% == 0'
     message: 'Outside thermometr changed its connection state'
+    sound: 'cosmic'
 
 ```
 
@@ -102,6 +103,11 @@ The default is 'SUPLA' when not provided.
 Now you can set the priority of notification using `priority`, `priority_expire`, `priority_retry` parameters. Read more at [`Pushover Priority`](https://pushover.net/api#priority)
 
 Now you can set `debouce` parameter in milliseconds. Debounce parameter means that condition will be true if changes between previous notification and current notification are longer than this parameter.
+
+You can specify `sound` of notification (only Android).
+
+
+
 
 
 # Condition language
